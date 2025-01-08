@@ -1,10 +1,14 @@
+<!-- Giving the catlist child's property a value  -->
+<!-- Reciving the click event containing the  value of the  category selected and do the filterin based on that   -->
 <app-product-filter
   [catList]="catListP"
   (catSelected)="selected($event)"
 ></app-product-filter>
+<!-- Display the product list filtred based on the category selected  -->
 <ul>
   <li *ngFor="let produit of produitFiltrer">
-    Nom : {{ produit.nom }} ,Référence : {{ produit.ref }} ,Catégorie :
-    {{ produit.cat }}
+    <p>Nom : {{ produit.nom }}</p>
+    <p>Référence : {{ produit.ref }}</p>
+    <p>Catégorie : {{ produit.cat }}</p>
   </li>
 </ul>
